@@ -28,6 +28,15 @@
      var icon_color = $('#icon_color').val();
      var material_icon = $("#material_icon").val();
 
+     var find = 'Y';
+     var re = new RegExp(find, 'g');
+
+     brand_name = brand_name.replace(re, '<img src="y.png" width="33" height="50" />');
+
+     var find = 'A';
+     var re = new RegExp(find, 'g');
+     brand_name = brand_name.replace(re, '<img src="a.png" width="33" height="50" />');
+
      $("#form").html("");
 
      $(document.body).css( "background", brand_color );
