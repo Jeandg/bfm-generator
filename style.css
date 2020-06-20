@@ -1,42 +1,102 @@
-body {
-  padding-bottom: 500px;
-}
-
-.material-icon-picker {
+#generate_form {
   position: absolute;
-  background: #fcfcfc;
-  text-align: center;
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  bottom: 20px;
+  width: 30%;
+  font-size: 1em;
+  font-family: Archivo Narrow;
+  transform: translateX(-50%);
 }
 
-.material-icon-picker:focus {
-  outline: none;
+form {
+  display: grid;
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #c1c1c1;
+  margin: 2rem auto 0 auto;
+  max-width: 600px;
+  padding: 1em;
 }
-
-.material-icon-picker-prefix {
-  top: .5rem;
+form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
 }
-
-.material-icon-picker .icons {
-  max-width: 300px;
-  max-height: 200px;
-  overflow: scroll;
-}
-
-div.material-icon-picker input[type="text"] {
+button {
+  background: lightgrey;
+  padding: 0.7em;
   width: 100%;
+  border: 0;
+  font-family: Archivo Narrow;
+  font-size: 1em;
+}
+button:hover {
+  background: #003572;
+  color: white;
 }
 
-.material-icon-picker .material-icons {
-  font-size: 30px;
+label {
+  padding: 1em 0 0.5em 0;
+  font-family: Archivo Narrow;
+  font-size: 1em;
+}
+
+input {
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+  font-family: Archivo Narrow;
+  font-size: 1em;
+}
+
+@media (min-width: 400px) {
+  form {
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+  }
+
+  label {
+    text-align: right;
+    grid-column: 1 / 2;
+  }
+
+  input,
+  button {
+    grid-column: 2 / 3;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  overflow: auto;
+  background-color: white;
   cursor: pointer;
-  border-radius: 50%;
-  padding: 10px;
-  margin: 3px;
-  transition: .2s;
 }
 
-.material-icon-picker .material-icons:hover {
-  background: #ececec;
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
 }
